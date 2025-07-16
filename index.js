@@ -1,6 +1,7 @@
 const { initializeDatabase } = require("./db/db.connect");
 const express = require("express");
 const fs = require("fs");
+const cors = require("cors");
 const Product = require("./model/products.model");
 const Category = require("./model/categories.model");
 
@@ -15,6 +16,7 @@ const categoriesData = JSON.parse(categoriesJsonData);
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 const PORT = process.env.PORT;
 
