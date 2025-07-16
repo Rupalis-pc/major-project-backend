@@ -1,0 +1,74 @@
+[
+  {
+    "categoryId": 1,
+    "type": "Sofa",
+    "imgUrl": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
+    "description": "Comfortable and stylish seating for your living room."
+  },
+  {
+    "categoryId": 2,
+    "type": "Bed",
+    "imgUrl": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmVkfGVufDB8fDB8fHww",
+    "description": "Soft and cozy beds for a perfect night’s sleep."
+  },
+  {
+    "categoryId": 3,
+    "type": "Dining Table",
+    "imgUrl": "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
+    "description": "Elegant dining tables to enjoy meals with family."
+  },
+  {
+    "categoryId": 4,
+    "type": "Chair",
+    "imgUrl": "https://images.unsplash.com/photo-1612372606404-0ab33e7187ee?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hhaXJ8ZW58MHx8MHx8fDA%3D",
+    "description": "Comfortable chairs for any room in your home."
+  },
+  {
+    "categoryId": 5,
+    "type": "Wardrobe",
+    "imgUrl": "https://plus.unsplash.com/premium_photo-1670076515866-73822a3d610d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d2FyZHJvYmV8ZW58MHx8MHx8fDA%3D",
+    "description": "Spacious wardrobes to organize your clothes neatly."
+  },
+  {
+    "categoryId": 6,
+    "type": "TV Unit",
+    "imgUrl": "https://plus.unsplash.com/premium_photo-1681236323432-3df82be0c1b0?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8VFYlMjB1bml0fGVufDB8fDB8fHww",
+    "description": "Modern TV units with storage and display shelves."
+  },
+  {
+    "categoryId": 7,
+    "type": "Bookshelf",
+    "imgUrl": "https://media.istockphoto.com/id/2160266474/photo/reading-room-in-old-library-or-house-vintage-style-leather-armchair-with-antique-lamp-night.jpg?s=612x612&w=0&k=20&c=WFbaaQMCBYaXS8msm0iEJB50iQVFA-8j1ilCgWj-3_8=",
+    "description": "Keep your books and decor organized in style."
+  },
+  {
+    "categoryId": 8,
+    "type": "Coffee Table",
+    "imgUrl": "https://media.istockphoto.com/id/831889838/photo/coffee-love.jpg?s=612x612&w=0&k=20&c=q_5CeqMPsjt9Fkt8zPAlj_UDIQc02Y6zQhpPnqrjVp8=",
+    "description": "Functional and decorative tables for your living area."
+  },
+  {
+    "categoryId": 9,
+    "type": "Recliner",
+    "imgUrl": "https://media.istockphoto.com/id/512351128/photo/brown-reclining-leather-chair.jpg?s=612x612&w=0&k=20&c=HfPu1hdKA_xUj_LxAWYdd9rJnwZ_1bNncfLHrnPskRs=",
+    "description": "Relax in comfort with our plush recliner chairs."
+  },
+  {
+    "categoryId": 10,
+    "type": "Office Desk",
+    "imgUrl": "https://media.istockphoto.com/id/874812746/photo/success-happens-when-you-combine-will-with-skill.jpg?s=612x612&w=0&k=20&c=xOFUbdvUvVOi1kJS23QTsvDwRW5GZCIqwjON3NrLge4=",
+    "description": "Study or work in peace with our ergonomic desks."
+  },
+  {
+    "categoryId": 11,
+    "type": "Nightstand",
+    "imgUrl": "https://media.istockphoto.com/id/1321502112/photo/bedroom-at-night-illuminated-by-electric-lamp-with-clock-on-night-table-beside-the-bed-with.jpg?s=612x612&w=0&k=20&c=LuumOj8h489o_kC4uai_B6KCbD74ES7Yjj7oaUBZMpk=",
+    "description": "Compact side tables to keep essentials by your bed."
+  },
+  {
+    "categoryId": 12,
+    "type": "Dresser",
+    "imgUrl": "https://media.istockphoto.com/id/1691910685/photo/elegant-composition-of-living-room-interior-with-beige-armchair-with-mock-up-poster-frame.jpg?s=612x612&w=0&k=20&c=4wB7oa5N1b4ivE7cjL3YVIIAWEZ88OyUvDPJZZjA8Hk=",
+    "description": "Stylish dressers to store your daily essentials."
+  }
+]
