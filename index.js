@@ -5,6 +5,8 @@ const Product = require("./model/products.model");
 const Category = require("./model/categories.model");
 const Wishlist = require("./model/wishlist.model");
 const Cart = require("./model/cart.model");
+const Order = require("./model/orders.model");
+const Address = require("./model/address.model");
 
 initializeDatabase();
 
@@ -157,6 +159,118 @@ app.delete("/cart/:productId", async (req, res) => {
     }
   } catch (error) {
     res.status(500).json({ error: "Failed to delete product from cart" });
+  }
+});
+
+app.get("/orders", async (req, res) => {
+  try {
+    const orders = await Order.find();
+    if (orders.length >= 0) {
+      res.json(orders);
+    } else {
+      res.status(404).json({ error: "Orders not found." });
+    }
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch Orders." });
+  }
+});
+
+app.post("/orders", async (req, res) => {
+  try {
+    const newOrder = new Order(req.body);
+    const saved = await newOrder.save();
+    if (saved) {
+      res.status(201).json({
+        message: "Order saved successfully",
+        orders: saved,
+      });
+    } else {
+      res.status(404).json({
+        error: "Failed to add product to orders, please try again!",
+      });
+    }
+  } catch (error) {
+    res
+      .status(500)
+      .json({ error: "Failed to post to orders, please try again!" });
+  }
+});
+
+app.delete("/cart/clear", async (req, res) => {
+  try {
+    await Cart.deleteMany({});
+    res.json({ message: "Cart cleared" });
+  } catch (error) {
+    res.status(500).json({ message: "Failed to clear cart" });
+  }
+});
+
+app.get("/address", async (req, res) => {
+  try {
+    const addressData = await Address.find();
+    if (addressData.length >= 0) {
+      res.json(addressData);
+    } else {
+      res.status(404).json({ error: "Address not found." });
+    }
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch Address Data." });
+  }
+});
+
+app.post("/address", async (req, res) => {
+  try {
+    const newAddress = new Address(req.body);
+    const saved = await newAddress.save();
+    if (saved) {
+      res.status(201).json({
+        message: "Address saved successfully",
+        orders: saved,
+      });
+    } else {
+      res.status(404).json({
+        error: "Failed to save address, please try again!",
+      });
+    }
+  } catch (error) {
+    res
+      .status(500)
+      .json({ error: "Failed to save address, please try again!" });
+  }
+});
+
+app.delete("/address/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const deleteAddress = await Address.findOneAndDelete(id); // req.params.id
+    if (deleteAddress) {
+      res
+        .status(200)
+        .json({ message: "Address deleted successfully", deleteAddress });
+    } else {
+      return res.status(404).json({ message: "Address not found" });
+    }
+  } catch (error) {
+    res.status(500).json({ message: "Error deleting address", error });
+  }
+});
+
+app.post("/address/update/:id", async (req, res) => {
+  const { id } = req.params;
+  const updatedData = req.body;
+  try {
+    const updatedAddress = await Address.findByIdAndUpdate(id, updatedData, {
+      new: true,
+    });
+    if (!updatedAddress) {
+      return res.status(404).json({ message: "Address not found" });
+    }
+    res.status(200).json({
+      message: "Address updated successfully via POST",
+      updatedAddress,
+    });
+  } catch (error) {
+    res.status(500).json({ message: "Failed to update address", error });
   }
 });
 
